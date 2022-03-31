@@ -1,0 +1,50 @@
+{
+	"extends": ["react-app", "react-app/jest", "prettier"],
+	"rules": {
+		"import/order": [
+			"error",
+			{
+				"alphabetize": {
+					"caseInsensitive": true,
+					"order": "asc"
+				},
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+				"newlines-between": "always"
+			}
+		],
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": false,
+				"ignoreDeclarationSort": true,
+				"ignoreMemberSort": false
+			}
+		],
+		"jsx-a11y/anchor-is-valid": 0
+	},
+	"env": {
+		"browser": true,
+		"jest": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module",
+		"jsx": true
+	},
+	"overrides": [
+		{
+			"files": ["*.test*.js"],
+			"rules": {
+				"max-len": ["error", { "code": 100, "tabWidth": 2 }],
+				"react/jsx-filename-extension": "off"
+			}
+		},
+		{
+			"files": ["*.js", "*.jsx"],
+			"rules": {
+				"max-len": ["error", { "code": 100, "tabWidth": 2 }]
+			}
+		}
+	]
+}
