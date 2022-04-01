@@ -1,0 +1,11 @@
+.wrapper {
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 500px;
+}
+
+.output {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 18px;
+}
